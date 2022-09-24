@@ -28,7 +28,7 @@ sudo pip install pyPS4Controller
 ## How to convert input to motor control
 - Which input data or switch will be most useful
 - What is the range of the input values
-- RMRC controller conversion example
+- RMRC controller conversion example in program
 ## How the data is handled
 - Add artificial delay - 1 second - between gamepad output update
 - Observe output example with extended delay
