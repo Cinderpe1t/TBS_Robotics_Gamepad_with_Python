@@ -21,7 +21,7 @@ ls /dev/input/js0
 sudo pip install pyPS4Controller
 ```
 ## Let’s look at default example code
-- It uses MyController class from pyPS4Controller
+- It uses MyController class `from pyPS4Controller`
 - Instantiate the class with the known game pad I/O port. Please modify the line according the finding
 - `controller = MyController(interface="/dev/input/js0", connecting_using_ds4drv=False)`
 - `python3 pyDS4_test_v2.py`
@@ -32,13 +32,14 @@ sudo pip install pyPS4Controller
 ## How the data is handled
 - Add artificial delay - 1 second - between gamepad output update
 - Observe output example with extended delay
+- Does the output follows your gamepad control in time?
 ## Where to convert gamepad input to motor control
 - Control station laptop
 - Robot controller
 ## How to extract right data for motor control
-- One lazy solution can be pickle
-- The ps4controller library itself does not have time information, and it just pushes out queued data
-- Pickle enforces only the latest data is picked up for motor control
+- One lazy solution can be `pickle`
+- The `ps4controller` library itself does not have time information, and it just pushes out queued and buffered data
+- `pickle` enforces only the latest data is picked up for motor control, while ps4 data is poured into pickle's data storage
 ## Open ended question: Implement a better way!
 - How would you modify the class?
 - Try other python game pad libraries
@@ -47,3 +48,5 @@ sudo pip install pyPS4Controller
 - https://github.com/piborg/Gamepad
 - https://blog.thea.codes/talking-to-gamepads-without-pygame/
 
+
+[Next: Camera for image and video capture](https://github.com/Cinderpe1t/TBS_Robotics_Camera_for_Image_and_Video_Capture) / [Top: Introduction](https://github.com/Cinderpe1t/TBS_Robotics_Introduction)
